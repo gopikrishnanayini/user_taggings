@@ -1,0 +1,15 @@
+development:
+  adapter: postgresql
+  encoding: utf8
+  database: user_tags_development
+  username: gopikrishna
+  password:
+  host: localhost
+
+test:
+  adapter: postgresql
+  encoding: utf8
+  database: user_tags_test
+  username: gopikrishna
+  password:
+  host: localhost
