@@ -12,6 +12,13 @@
   </head>
 
   <body>
+    <div class="w3-bar w3-white w3-padding w3-card" style="letter-spacing:4px;">
+      <% if current_user.present? %>
+        <ul class="nav navbar-nav navbar-right">
+          <li><%= link_to "Logout", destroy_user_session_path, method: :delete,:data => { confirm: 'Are you sure, you want to Logout?.'} %></li>
+        </ul>
+      <% end %>
+    </div>
     <%= yield %>
   </body>
 </html>
