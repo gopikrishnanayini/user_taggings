@@ -122,6 +122,11 @@ export default {
           sortable: true
         },
         {
+          key: 'email',
+          label: 'Email',
+          sortable: true
+        },
+        {
           key: 'status',
           label: 'Status',
           sortable: true

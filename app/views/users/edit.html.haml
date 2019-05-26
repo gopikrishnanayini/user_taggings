@@ -16,11 +16,15 @@
               %span.input-group-addon
                 %i.fa.fa-user
               = f.text_field :first_name, autocomplete: "off", :class => "form-control", placeholder: "please enter your first name"
+              %span.field_with_errors
+                = f.object.errors.messages[:first_name].join("") if f.object.errors.messages[:first_name].present?
             %span.help-block
             .input-group
               %span.input-group-addon
                 %i.fa.fa-user
               = f.text_field :last_name, autocomplete: "off", :class => "form-control", placeholder: "please enter your last name"
+              %span.field_with_errors
+                = f.object.errors.messages[:last_name].join("") if f.object.errors.messages[:last_name].present?
             %span.help-block
             .input-group
               %span.input-group-addon
@@ -36,10 +40,14 @@
               %span.input-group-addon
                 %i.fa.fa-lock
               = f.password_field :password, autocomplete: "off", :class => "form-control", placeholder: "please give password for your account"
+              %span.field_with_errors
+                = f.object.errors.messages[:email].join("") if f.object.errors.messages[:email].present?
             %span.help-block
             .input-group
               %span.input-group-addon
                 %i.fa.fa-lock
               = f.password_field :password_confirmation, autocomplete: "off", :class => "form-control", placeholder: "please confirm your password"
+              %span.field_with_errors
+                = f.object.errors.messages[:password].join("") if f.object.errors.messages[:password].present?
             %span.help-block
             = f.submit "Update", :class => "btn btn-primary btn-block"
